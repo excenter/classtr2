@@ -34,10 +34,19 @@
 			<section id="dndTree">
 			<br>
 			<script>
-
+{
+	position:absolute;
+	width:auto;
+	height:auto;
+	z-index:101;
+	left:205px;
+	top:75px;
+	padding:0px;
+}
 
 // Get JSON data
-dndTree = d3.json("flare.json", function(error, treeData) {
+
+d3tree = d3.json("flare.json", function(error, treeData) {
 
     // Calculate total nodes, max label length
     var totalNodes = 0;

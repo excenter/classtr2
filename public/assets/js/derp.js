@@ -1,6 +1,3 @@
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<script src="dndTree.js"></script>
-
 // Get JSON data
 treeJSON = d3.json("flare.json", function(error, treeData) {
 

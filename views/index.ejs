@@ -8,6 +8,24 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	</head>
+			<!-- Scripts -->
+			
+			<!-- jQuery API -->
+			<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+			
+			<!-- Bootstrap API -->
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+			
+			<!-- d3.js API -->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.js"></script>
+
+			
+			<!-- Stock template API's -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
 	<body>
 
 		<!-- Banner -->
@@ -38,6 +56,7 @@
 
 // Get JSON data
 
+$( document ).ready(function() {
 d3tree = d3.json("flare.json", function(error, treeData) {
 {p
     // Calculate total nodes, max label length
@@ -560,6 +579,7 @@ d3tree = d3.json("flare.json", function(error, treeData) {
     update(root);
     centerNode(root);
 });
+});
 
 
 			</script>
@@ -598,24 +618,5 @@ d3tree = d3.json("flare.json", function(error, treeData) {
 					&copy; Classtr Design: <a href="http://templated.co/">TEMPLATED</a>.
 				</div>
 			</footer>
-
-		<!-- Scripts -->
-			
-			<!-- jQuery API -->
-			<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-			
-			<!-- Bootstrap API -->
-			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-			
-			<!-- d3.js API -->
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.js"></script>
-
-			
-			<!-- Stock template API's -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>	
 	</body>
 </html>

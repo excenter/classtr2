@@ -34,20 +34,12 @@
 			<section id="dndTree">
 			<br>
 			<script>
-{
-	position:absolute;
-	width:auto;
-	height:auto;
-	z-index:101;
-	left:205px;
-	top:75px;
-	padding:0px;
-}
+
 
 // Get JSON data
 
 d3tree = d3.json("flare.json", function(error, treeData) {
-
+{p
     // Calculate total nodes, max label length
     var totalNodes = 0;
     var maxLabelLength = 0;
@@ -553,6 +545,7 @@ d3tree = d3.json("flare.json", function(error, treeData) {
             d.x0 = d.x;
             d.y0 = d.y;
         });
+		}
     }
 
     // Append a group which holds all nodes and which the zoom Listener can act upon.

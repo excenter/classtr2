@@ -53,7 +53,7 @@
 		// Get JSON data
 		classtrapp = d3.json("./flare.json", function(error, treeData) {
 var G3 = jsnx.Graph();
-
+	
 G3.add_nodes_from([1,2,3,4,5,6,7,8,9], {group:0});
 G3.add_nodes_from([10,11,12,13,14,15,16,17,18], {group:1});
 G3.add_nodes_from([19,20], {group:2});
@@ -83,7 +83,7 @@ jsnx.draw(G3, {
     edge_style: {
         stroke: '#999'
     }
-}, true);
+}, true)});
 
 	</script>
 	</section>

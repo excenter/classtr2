@@ -53,6 +53,8 @@
 		// Get JSON data
 		classtrapp = d3.json("./flare.json", function(error, treeData) {
 //var jsnx = require('jsnetworkx');
+var elem1 = document.getElementById("elemId");
+var style = window.getComputedStyle(elem1, null);
 var G = new jsnx.Graph();
  
 G.addNodesFrom([1,2,3,4], {group:0});

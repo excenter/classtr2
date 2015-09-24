@@ -49,6 +49,7 @@
 		<section id="classtrapp">
 		<!-- <script src="./treed3_index.ejs"> -->
 		<script>
+		window.onload = function(){
 
 		// Get JSON data
 		classtrapp = d3.json("./flare.json", function(error, treeData) {
@@ -82,7 +83,7 @@ jsnx.draw(G, {
     edgeStyle: {
         fill: '#999'
     }
-})});
+})})};
 <!--test-->
 	</script>
 	</section>

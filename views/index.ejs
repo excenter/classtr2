@@ -52,38 +52,37 @@
 
 		// Get JSON data
 		classtrapp = d3.json("./flare.json", function(error, treeData) {
-var G3 = jsnx.Graph();
-	
-G3.add_nodes_from([1,2,3,4,5,6,7,8,9], {group:0});
-G3.add_nodes_from([10,11,12,13,14,15,16,17,18], {group:1});
-G3.add_nodes_from([19,20], {group:2});
-
-G3.add_path([1,2,3,4,5,6,7,8,9,1]);
-G3.add_edges_from([[1,10],[2,11],[3,12],[4,13],[5,14],[6,15],[7,16],[8,17],[9,18]]);
-G3.add_edges_from([[10,11],[11,12],[13,14],[14,15],[16,17],[17,18]]);
-G3.add_edges_from([[9,19],[12,19],[15,19],[11,20],[14,20],[17,20]]);
-
+var jsnx = require('jsnetworkx');
+var G = new jsnx.Graph();
+ 
+G.addNodesFrom([1,2,3,4], {group:0});
+G.addNodesFrom([5,6,7], {group:1});
+G.addNodesFrom([8,9,10,11], {group:2});
+ 
+G.addPath([1,2,5,6,7,8,11]);
+G.addEdgesFrom([[1,3],[1,4],[3,4],[2,3],[2,4],[8,9],[8,10],[9,10],[11,10],[11,9]]);
+ 
 var color = d3.scale.category20();
-jsnx.draw(G3, {
-    element: '#chart3',
-    layout_attr: {
+jsnx.draw(G, {
+    element: '#canvas',
+    layoutAttr: {
         charge: -120,
         linkDistance: 20
     },
-    node_attr: {
+    nodeAttr: {
         r: 5,
         title: function(d) { return d.label;}
     },
-    node_style: {
+    nodeStyle: {
         fill: function(d) { 
             return color(d.data.group); 
         },
         stroke: 'none'
     },
-    edge_style: {
-        stroke: '#999'
+    edgeStyle: {
+        fill: '#999'
     }
-}, true)});
+});};
 <!--test-->
 	</script>
 	</section>
